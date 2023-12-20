@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/CounterApp.dart';
+import 'package:provider/provider.dart';
 import 'RandomWordScreen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+      ChangeNotifierProvider(create: (context) => Counter(), child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
